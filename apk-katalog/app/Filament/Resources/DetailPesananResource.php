@@ -6,6 +6,7 @@ use App\Filament\Resources\DetailPesananResource\Pages;
 use App\Filament\Resources\DetailPesananResource\RelationManagers;
 use App\Models\DetailPesanan;
 use Filament\Forms;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -23,7 +24,13 @@ class DetailPesananResource extends Resource
     {
         return $form
             ->schema([
-                //
+                TextInput::make("id_pesanan")
+                    ->required(),
+                TextInput::make("id_produk")
+                    ->required(),
+                TextInput::make("jumlah")
+                    ->required(),
+                TextInput::make("subtotal")
             ]);
     }
 
