@@ -10,3 +10,5 @@ class CreateRiwayatPembelian extends CreateRecord
 {
     protected static string $resource = RiwayatPembelianResource::class;
 }
+
+
